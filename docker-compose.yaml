@@ -6,7 +6,7 @@ services:
   hostname: 'mygitlab-server'
   restart: always
   ports:
-   -'8000:80'
+    - '8000:80'
   environment:
    GITLAB_OMNIBUS_CONFIG: |
     gitlab_rails['initial_root_password'] = 'sagar@74645'
@@ -17,7 +17,7 @@ services:
    - gitlab-logs:/var/log/gitlab
    - gitlab-config:/etc/gitlab
 
-gitlab-runner:
+ gitlab-runner:
   image: 'gitlab/gitlab-runner:latest'
   container_name: 'mygitlab-runner'
   restart: always
